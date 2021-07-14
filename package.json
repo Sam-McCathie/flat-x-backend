@@ -1,0 +1,17 @@
+{
+  "name": "flat-x-backend",
+  "version": "1.0.0",
+  "description": "Practice project - Flat manager app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Sam-McCathie",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2",
+    "nodemon": "^2.0.12"
+  }
+}
