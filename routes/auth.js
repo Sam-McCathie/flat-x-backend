@@ -53,4 +53,14 @@ router.post("/login", async (req, res) => {
   res.header("auth-token", token).send(token);
 });
 
+//Get user - will need to reconfigure this route later.
+router.get("/current", async (req, res) => {
+  User.find({}, (err, result) => {
+    if (err) {
+      res.send(err);
+    }
+    res.send(result);
+  });
+});
+
 module.exports = router;
