@@ -14,7 +14,7 @@ router.post("/create-new", async (req, res) => {
   }
 });
 
-//GET flat - @ http://localhost:3001/api/flat/flat-list
+//GET flat - @ http://localhost:3001/api/flat/list
 router.get("/list", async (req, res) => {
   Flat.find({}, (err, result) => {
     if (err) {
