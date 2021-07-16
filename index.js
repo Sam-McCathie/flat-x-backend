@@ -10,6 +10,7 @@ require("dotenv").config();
 const authRoute = require("./routes/auth");
 const dashboardRoute = require("./routes/dashboard");
 const flatRoute = require("./routes/flat");
+const jobRoute = require("./routes/job");
 
 // Middleware
 app.use(express.json());
@@ -29,6 +30,7 @@ mongoose.connect(
 app.use("/api/user", authRoute);
 app.use("/api/dashboard", dashboardRoute);
 app.use("/api/flat", flatRoute);
+app.use("/api/job", jobRoute);
 
 //Server running
 app.listen(port, () => {
