@@ -1,8 +1,7 @@
 const router = require("express").Router();
-const cors = require("cors");
 const Flat = require("../models/Flat");
 
-//Create flat - @ http://localhost:3001/api/flat/create-new
+//POST flat - @ http://localhost:3001/api/flat/create-new
 router.post("/create-new", async (req, res) => {
   const flat = new Flat({
     flatName: req.body.flatName,
@@ -15,8 +14,8 @@ router.post("/create-new", async (req, res) => {
   }
 });
 
-//Get flat - @ http://localhost:3001/api/flat/flat-list
-router.get("/flat-list", async (req, res) => {
+//GET flat - @ http://localhost:3001/api/flat/flat-list
+router.get("/list", async (req, res) => {
   Flat.find({}, (err, result) => {
     if (err) {
       res.send(err);
